@@ -2,6 +2,9 @@ module CloudflairCookbook
   class CloudflairDns < CloudflairBase
     require_relative 'helpers_dns'
 
+    resource_name :cloudflair_dns
+    provides :cloudflair_dns
+
     include CloudflairHelpers::Dns
 
     property :dns_name, String, name_property: true

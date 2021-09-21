@@ -1,5 +1,8 @@
 module CloudflairCookbook
   class CloudflairCredentials < CloudflairBase
+    resource_name :cloudflair_credentials
+    provides :cloudflair_credentials
+
     property :email, String, name_property: true
     property :key, String
 
