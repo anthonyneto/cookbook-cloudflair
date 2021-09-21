@@ -1,6 +1,6 @@
 # Cloudflair
 *This cookbook is not really maintained and so is the [cloudflair gem](https://github.com/ninech/cloudflair).*
-Cookbook used to manage cloudflare dns.  
+Cookbook used to manage cloudflare dns.
 Updated and tested to work with chef `15.17.4`
 
 ## Usage
