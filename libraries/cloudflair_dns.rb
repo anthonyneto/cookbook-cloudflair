@@ -4,8 +4,6 @@ module CloudflairCookbook
 
     include CloudflairHelpers::Dns
 
-    resource_name :cloudflair_dns
-
     property :dns_name, String, name_property: true
     property :zone, String
     property :type, String
@@ -39,10 +37,6 @@ module CloudflairCookbook
     end
 
     declare_action_class.class_eval do
-      def whyrun_supported?
-        true
-      end
-
       def call_action(action)
         send("action_#{action}")
         load_current_resource
@@ -58,7 +52,7 @@ module CloudflairCookbook
           type: new_resource.type,
           content: new_resource.content,
           ttl: new_resource.ttl,
-          proxied: new_resource.proxied
+          proxied: new_resource.proxied,
         }
         if record_data.nil?
           create_record(zone_data.id, options)

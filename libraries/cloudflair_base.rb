@@ -1,5 +1,5 @@
 module CloudflairCookbook
-  class CloudflairBase < ChefCompat::Resource
+  class CloudflairBase < Chef::Resource
     require 'cloudflair'
     require 'resolv'
 
