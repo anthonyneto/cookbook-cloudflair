@@ -1,0 +1,9 @@
+DEPENDENCIES
+  cloudflair
+    path: .
+    metadata: true
+
+GRAPH
+  cloudflair (0.1.0)
+    compat_resource (>= 0.0.0)
+  compat_resource (12.16.3)
